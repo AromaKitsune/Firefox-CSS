@@ -1,0 +1,83 @@
+/* Hide the Close button from each tab */
+.tab-close-button {
+  display: none !important;
+}
+
+/* Move the "leave page" dialog to the top center
+ * https://www.reddit.com/r/FirefoxCSS/comments/1lvn3pe/comment/n27ll9u/ */
+.dialogOverlay {
+    .content-prompt-dialog > & {
+        place-content: start center !important;
+        padding-top: 1vh !important;
+    }
+}
+
+/* Expand the "Add bookmark" tree-view area
+ * https://www.reddit.com/r/FirefoxCSS/comments/1jj31rw/comment/mjk6pcx/ */
+#editBMPanel_folderTree {
+  height: 50em !important;
+}
+
+/* Lock the SideBar width
+ * https://www.reddit.com/r/FirefoxCSS/comments/1jtmptd/comment/mlvl5z6/ */
+.sidebar-splitter {
+  pointer-events: none;
+}
+
+/* Remove the Content border and SideBar shadow
+ * https://www.reddit.com/r/FirefoxCSS/comments/1j3mx5s/comment/mg256hp/ */
+#tabbrowser-tabbox {
+  /* outline: none !important; */
+  box-shadow: none !important;
+}
+
+/* Make the collapsed Tab Groups' outline not look ugly with dark theme
+ * https://www.reddit.com/r/FirefoxCSS/comments/1k1itvc/comment/mnnxnks/ */
+.tab-group-label {
+  tab-group[collapsed] > .tab-group-label-container > & {
+    outline: 1px solid light-dark(var(--tab-group-color), rgba(0,0,0,0.3)) !important;
+  }
+}
+
+/* Back & Forward Buttons */
+#back-button {
+  list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
+}
+
+#forward-button {
+  list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
+}
+
+/* Centerd URL Box Text */
+.urlbar-input {
+  text-align: center !important;
+}
+
+/* Outlined URL Box */
+#urlbar #urlbar-background,
+#searchbar {
+  border-radius: 8px !important;
+}
+
+#urlbar:not([focused]) #urlbar-background,
+#searchbar {
+  border: 1px solid var(--chrome-content-separator-color) !important;
+}
+
+/* Transparent Search Button Background */
+#urlbar-searchmode-switcher,
+#searchmode-switcher-chicklet,
+#identity-box > .identity-box-button,
+#urlbar-label-box {
+  background-color: transparent !important;
+}
+
+/* Remove the green dot from a tab */
+.tab-content[attention]:not([selected]),
+.tab-content[titlechanged]:not([selected]) {
+  background-image: none !important;
+}
+
+.tab-label[attention]:not([selected]) {
+  font-weight: normal !important;
+}

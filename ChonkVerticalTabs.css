@@ -1,0 +1,261 @@
+/* Chonk Vertical Tabs */
+
+
+/* Browser Tabs */
+/* ------------------------------------------------------------------------------------------ */
+
+/* Tab Background */
+.tab-background {
+  #tabbrowser-tabs[orient="vertical"] & {
+    min-height: 48px !important;
+    border-radius: 12px !important;
+  }
+
+  #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+    min-width: 48px !important;
+  }
+}
+
+/* Tab Icon */
+.tab-throbber,
+.tab-icon-pending,
+.tab-icon-image,
+.tab-sharing-icon-overlay,
+.tab-icon-overlay {
+  #tabbrowser-tabs[orient="vertical"] & {
+    width: 24px !important;
+    height: 24px !important;
+    margin-inline-start: 4px !important;
+  }
+
+  #tabbrowser-tabs[orient="vertical"][expanded] & {
+    margin-inline-end: 12px !important;
+  }
+}
+
+/* Tab Label */
+.tab-label {
+  #tabbrowser-tabs[orient="vertical"] & {
+    max-height: 40px !important;
+    line-height: 1.5 !important;
+    margin-inline-end: 4px !important;
+    /* Wrap the Tab Label texts
+     * https://css-tricks.com/almanac/properties/l/line-clamp/ */
+    white-space: wrap !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+}
+
+/* Tab Label Fade Effect */
+.tabbrowser-tab {
+  #tabbrowser-tabs[orient="vertical"] & {
+    --tab-label-mask-size: 0 !important;
+  }
+}
+
+
+/* Tab Groups */
+/* ------------------------------------------------------------------------------------------ */
+
+/* Tab Group Background */
+.tab-group-line {
+  #tabbrowser-tabs[orient="vertical"] & {
+    #tabbrowser-tabs[expanded] & {
+      inset-inline-start: var(--tab-group-line-thickness) !important;
+    }
+  }
+}
+
+#tabbrowser-tabs[orient="vertical"][expanded] {
+  tab-group > :is(.tab-group-label-container, .tabbrowser-tab),
+  &[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],[movingtab-ungroup]) .tabbrowser-tab:is(:active,[multiselected]) {
+    margin-inline-start: 0 !important;
+  }
+}
+
+.tab-group-label-container {
+  #tabbrowser-tabs:is([orient="vertical"][expanded]) tab-group:not([collapsed]) > &::after {
+    content: "" !important;
+    background-color: light-dark(var(--tab-group-color), var(--tab-group-color-invert)) !important;
+    position: absolute !important;
+  }
+}
+
+/* Tab Group Label */
+.tab-group-label {
+  #tabbrowser-tabs[orient="vertical"] & {
+    height: 32px !important;
+    line-height: 32px !important;
+    border-radius: 8px !important;
+    /* Needed for Tab Group Label Chevrons */
+    display: flex !important;
+  }
+
+  #tabbrowser-tabs[orient="vertical"][expanded] & {
+    width: 100% !important;
+    margin-left: 10px !important;
+    /* Left-align the Tab Group Label text */
+    text-align: left !important;
+    padding-inline: 16px !important;
+  }
+
+  #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+    width: 48px !important;
+    max-width: 48px !important;
+    /* Prevent the tab group label from jumping around
+       during the sidebar collapsed-to-expanded transition */
+    margin-inline: 10px !important;
+
+    &::first-letter {
+      font-size: 0 !important;
+    }
+  }
+}
+
+/* Tab Group Label Chevrons */
+.tab-group-label {
+  tab-group > .tab-group-label-container > &::before {
+    display: flex !important;
+    width: 16px !important;
+    height: 16px !important;
+    -moz-context-properties: fill !important;
+    fill: currentColor !important;
+  }
+
+  #tabbrowser-tabs[orient="vertical"][expanded] & {
+    /* Expanded SideBar + Expanded TabGroup */
+    tab-group:not([collapsed]) > .tab-group-label-container > &::before {
+      padding-inline-end: 8px !important;
+      padding-top: 8px !important;
+      content: url("chrome://global/skin/icons/arrow-down.svg") !important;
+    }
+
+    /* Expanded SideBar + Collapsed TabGroup */
+    tab-group:is([collapsed]) > .tab-group-label-container > &::before {
+      padding-inline-end: 8px !important;
+      padding-top: 8px !important;
+      content: url("chrome://global/skin/icons/arrow-right.svg") !important;
+    }
+  }
+
+  #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+    /* Collapsed SideBar + Expanded TabGroup */
+    tab-group:not([collapsed]) > .tab-group-label-container > &::before {
+      margin: auto !important;
+      content: url("chrome://global/skin/icons/arrow-down.svg") !important;
+    }
+
+    /* Collapsed SideBar + Collapsed TabGroup */
+    tab-group:is([collapsed]) > .tab-group-label-container > &::before {
+      margin: auto !important;
+      content: url("chrome://global/skin/icons/arrow-right.svg") !important;
+    }
+  }
+}
+
+
+/* New Tab Button */
+/* ------------------------------------------------------------------------------------------ */
+
+/* New Tab Background */
+#tabbrowser-tabs[orient="vertical"] #tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  min-height: 48px !important;
+  border-radius: 12px !important;
+}
+
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) #tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  min-width: 48px !important;
+}
+
+/* New Tab Icon */
+.toolbarbutton-icon {
+  #tabbrowser-tabs[orient="vertical"] & {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  #tabbrowser-tabs[orient="vertical"][expanded] & {
+    margin-inline-start: 4px !important;
+  }
+}
+
+/* New Tab Label */
+#tabbrowser-tabs[orient="vertical"][expanded] #tabs-newtab-button,
+#vertical-tabs-newtab-button {
+  > .toolbarbutton-text {
+    padding-inline-start: 12px !important;
+  }
+}
+
+/* Pinned Tabs */
+/* ------------------------------------------------------------------------------------------ */
+
+/* Pinned Tab Container */
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+    .tabbrowser-tab[pinned] {
+      width: unset !important;
+    }
+  }
+}
+
+/* Pinned Tab Icon */
+#vertical-pinned-tabs-container {
+  .tab-throbber,
+  .tab-icon-pending,
+  .tab-icon-image,
+  .tab-sharing-icon-overlay,
+  .tab-icon-overlay {
+    #tabbrowser-tabs[orient="vertical"] & {
+      margin-inline: unset !important;
+    }
+  }
+}
+
+
+/* Tab Containers */
+/* ------------------------------------------------------------------------------------------ */
+
+/* Tab Container Line */
+_.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+  #vertical-pinned-tabs-container &,
+  #tabbrowser-tabs[orient="vertical"] & {
+    display: none !important;
+  }
+}
+
+/* Tab Label */
+_.tabbrowser-tab[usercontextid] > .tab-stack > .tab-content > .tab-label-container > .tab-label {
+  #vertical-pinned-tabs-container &,
+  #tabbrowser-tabs[orient="vertical"] & {
+    color: var(--identity-icon-color) !important;
+  }
+}
+
+
+/* Misc */
+/* ------------------------------------------------------------------------------------------ */
+
+/* Hide the Close button from each tab */
+.tab-close-button {
+  display: none !important;
+}
+
+/* Remove the Content border and SideBar shadow
+ * https://www.reddit.com/r/FirefoxCSS/comments/1j3mx5s/comment/mg256hp/ */
+#tabbrowser-tabbox {
+  /* outline: none !important; */
+  box-shadow: none !important;
+}
+
+/* Make the collapsed Tab Groups' outline not look ugly with dark theme
+ * https://www.reddit.com/r/FirefoxCSS/comments/1k1itvc/comment/mnnxnks/ */
+.tab-group-label {
+  tab-group[collapsed] > .tab-group-label-container > & {
+    outline: 1px solid light-dark(var(--tab-group-color), rgba(0,0,0,0.3)) !important;
+  }
+}
