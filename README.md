@@ -28,6 +28,7 @@ Some styles that I'm currently using. These links lead to the original sources f
 * Outlined URL box
 * Transparent search button background
 * Remove the green dot from a tab
+
 `*` Also part of "Chonk Vertical Tabs", so you can use only `ChonkVerticalTabs.css`.
 
 
