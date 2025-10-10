@@ -54,14 +54,10 @@
 }
 
 /* Outlined URL Box */
-#urlbar #urlbar-background,
-#searchbar {
-  border-radius: 8px !important;
-}
-
-#urlbar:not([focused]) #urlbar-background,
+.urlbar-background,
 #searchbar {
   border: 1px solid var(--chrome-content-separator-color) !important;
+  border-radius: 8px !important;
 }
 
 /* Transparent Search Button Background */
