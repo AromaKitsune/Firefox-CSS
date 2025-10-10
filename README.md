@@ -32,7 +32,7 @@ Some styles that I'm currently using. These links lead to the original sources f
 `*` Also part of "Chonk Vertical Tabs", so you can use only `ChonkVerticalTabs.css`.
 
 
-# Setup
+## Setup
 
 1. Go to `about:config`.
 2. Set the `toolkit.legacyUserProfileCustomizations.stylesheets` flag to `true`.
@@ -44,7 +44,7 @@ Some styles that I'm currently using. These links lead to the original sources f
 8. Enjoy!
 
 If you have an existing CSS setup, place those CSS files (except `userChrome.css`) into the `chrome` folder,
-add the following path(s) to your `userChrome.css` file:
+and add the following path(s) to your `userChrome.css` file:
 ```
 @import "ChonkVerticalTabs.css";
 @import "OtherStyles.css";
