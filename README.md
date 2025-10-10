@@ -4,7 +4,7 @@ A small collection of various Firefox CSS customisations.
 
 ## Chonk Vertical Tabs
 
-Vertical tabs with two lines titles
+Vertical tabs with two lines titles, full-width tab group labels, chevron arrows added to the tab group labels.
 
 [ChonkVerticalTabs.css](https://github.com/AromaKitsune/Firefox-CSS/blob/main/chrome/ChonkVerticalTabs.css)
 
