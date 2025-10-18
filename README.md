@@ -29,7 +29,7 @@ Some styles that I'm currently using. These links lead to the original sources f
 * Transparent search button background
 * Remove the green dot from a tab
 
-`*` Also part of "Chonk Vertical Tabs", so you can use only `ChonkVerticalTabs.css`.
+`*` Also part of "Chonk Vertical Tabs", so you can use only `ChonkVerticalTabs.css` if you prefer.
 
 
 ## Setup
