@@ -6,16 +6,16 @@ A small collection of various Firefox CSS customisations.
 
 Vertical tabs with two lines titles, full-width tab group labels, chevron arrows added to the tab group labels.
 
-[ChonkVerticalTabs.css](https://github.com/AromaKitsune/Firefox-CSS/blob/main/chrome/ChonkVerticalTabs.css)
+[ChonkVerticalTabs.css](/chrome/ChonkVerticalTabs.css)
 
-![](https://github.com/AromaKitsune/Firefox-CSS/blob/main/screenshots/ChonkVerticalTabs.png)
+![](/screenshots/ChonkVerticalTabs.png)
 
 
 ## Other Styles
 
 Some styles that I'm currently using. These links lead to the original sources for reference.
 
-[OtherStyles.css](https://github.com/AromaKitsune/Firefox-CSS/blob/main/chrome/OtherStyles.css)
+[OtherStyles.css](/chrome/OtherStyles.css)
 
 * Hide the Close button from each tab `*`
 * [Move the "leave page" dialog to the top center](https://www.reddit.com/r/FirefoxCSS/comments/1lvn3pe/comment/n27ll9u/)
