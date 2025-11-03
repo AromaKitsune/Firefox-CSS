@@ -4,6 +4,11 @@
 /* Browser Tabs */
 /* ------------------------------------------------------------------------------------------ */
 
+/* Side Bar */
+#vertical-tabs:not([expanded]) {
+  min-width: 68px !important;
+}
+
 /* Tab Background */
 .tab-background {
   #tabbrowser-tabs[orient="vertical"] & {
@@ -115,9 +120,20 @@
   }
 }
 
+/* Tab Group Label (FF v144+) */
+.tab-group-label-hover-highlight {
+  #tabbrowser-tabs[orient="vertical"][expanded] & {
+    margin-inline-end: 0px !important;
+  }
+
+  #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+    margin-inline: 0px !important;
+  }
+}
+
 /* Tab Group Label Chevrons */
 .tab-group-label {
-  tab-group > .tab-group-label-container > &::before {
+  tab-group > .tab-group-label-container &::before {
     display: flex !important;
     width: 16px !important;
     height: 16px !important;
@@ -127,14 +143,14 @@
 
   #tabbrowser-tabs[orient="vertical"][expanded] & {
     /* Expanded SideBar + Expanded TabGroup */
-    tab-group:not([collapsed]) > .tab-group-label-container > &::before {
+    tab-group:not([collapsed]) > .tab-group-label-container &::before {
       padding-inline-end: 8px !important;
       padding-top: 8px !important;
       content: url("chrome://global/skin/icons/arrow-down.svg") !important;
     }
 
     /* Expanded SideBar + Collapsed TabGroup */
-    tab-group:is([collapsed]) > .tab-group-label-container > &::before {
+    tab-group:is([collapsed]) > .tab-group-label-container &::before {
       padding-inline-end: 8px !important;
       padding-top: 8px !important;
       content: url("chrome://global/skin/icons/arrow-right.svg") !important;
@@ -143,13 +159,13 @@
 
   #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
     /* Collapsed SideBar + Expanded TabGroup */
-    tab-group:not([collapsed]) > .tab-group-label-container > &::before {
+    tab-group:not([collapsed]) > .tab-group-label-container &::before {
       margin: auto !important;
       content: url("chrome://global/skin/icons/arrow-down.svg") !important;
     }
 
     /* Collapsed SideBar + Collapsed TabGroup */
-    tab-group:is([collapsed]) > .tab-group-label-container > &::before {
+    tab-group:is([collapsed]) > .tab-group-label-container &::before {
       margin: auto !important;
       content: url("chrome://global/skin/icons/arrow-right.svg") !important;
     }
@@ -190,6 +206,7 @@
     padding-inline-start: 12px !important;
   }
 }
+
 
 /* Pinned Tabs */
 /* ------------------------------------------------------------------------------------------ */
