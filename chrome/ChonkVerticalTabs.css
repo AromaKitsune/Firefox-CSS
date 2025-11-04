@@ -89,6 +89,15 @@
   }
 }
 
+/* Tab Group Overflow Count */
+.tab-group-overflow-count-container {
+  #tabbrowser-tabs[orient="vertical"] & {
+    #tabbrowser-tabs[expanded] & {
+      margin-inline-start: var(--tab-group-line-thickness) !important;
+    }
+  }
+}
+
 /* Tab Group Label */
 .tab-group-label {
   #tabbrowser-tabs[orient="vertical"] & {
