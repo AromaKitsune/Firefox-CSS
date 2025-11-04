@@ -132,11 +132,11 @@
 /* Tab Group Label (FF v144+) */
 .tab-group-label-hover-highlight {
   #tabbrowser-tabs[orient="vertical"][expanded] & {
-    margin-inline-end: 0px !important;
+    margin-inline-end: 0 !important;
   }
 
   #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
-    margin-inline: 0px !important;
+    margin-inline: 0 !important;
   }
 }
 
