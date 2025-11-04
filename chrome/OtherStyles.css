@@ -60,12 +60,18 @@
   border-radius: 8px !important;
 }
 
-/* Transparent Search Button Background */
-#urlbar-searchmode-switcher,
-#searchmode-switcher-chicklet,
-#identity-box > .identity-box-button,
-#urlbar-label-box {
+/* Transparent BG of Search Mode Switcher Button & URL Bar Label Box */
+.searchmode-switcher,
+.searchmode-switcher-chicklet {
   background-color: transparent !important;
+}
+
+#urlbar[focused],
+#urlbar:not([focused]) {
+  #identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button:not(:hover, [open]),
+  #urlbar-label-box {
+    background-color: transparent !important;
+  }
 }
 
 /* Remove the green dot from a tab */
