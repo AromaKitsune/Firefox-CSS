@@ -6,7 +6,7 @@ A small collection of various Firefox CSS customisations.
 
 Vertical tabs with two lines titles, full-width tab group labels, chevron arrows added to the tab group labels.
 
-[ChonkVerticalTabs.css](/chrome/ChonkVerticalTabs.css)
+CSS code: [ChonkVerticalTabs.css](/chrome/ChonkVerticalTabs.css)
 
 ![](/screenshots/ChonkVerticalTabs.png)
 
@@ -15,7 +15,7 @@ Vertical tabs with two lines titles, full-width tab group labels, chevron arrows
 
 Some styles that I'm currently using. These links lead to the original sources for reference.
 
-[OtherStyles.css](/chrome/OtherStyles.css)
+CSS code: [OtherStyles.css](/chrome/OtherStyles.css)
 
 * Hide the Close button from each tab `*`
 * [Move the "leave page" dialog to the top center](https://www.reddit.com/r/FirefoxCSS/comments/1lvn3pe/comment/n27ll9u/)
@@ -26,7 +26,7 @@ Some styles that I'm currently using. These links lead to the original sources f
 * Alternative Back & Forward buttons glyphs
 * [Centered URL box text](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/urlbar_centered_text.css) - Also centered when the URL box is focused
 * Outlined URL box
-* Transparent search button background
+* Transparent BG of Search Mode Switcher Button & URL Bar Label Box
 * Remove the green dot from a tab
 
 `*` Also part of "Chonk Vertical Tabs", so you can use only `ChonkVerticalTabs.css` if you prefer.
