@@ -243,26 +243,6 @@
 }
 
 
-/* Tab Containers */
-/* ------------------------------------------------------------------------------------------ */
-
-/* Tab Container Line */
-_.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  #vertical-pinned-tabs-container &,
-  #tabbrowser-tabs[orient="vertical"] & {
-    display: none !important;
-  }
-}
-
-/* Tab Label */
-_.tabbrowser-tab[usercontextid] > .tab-stack > .tab-content > .tab-label-container > .tab-label {
-  #vertical-pinned-tabs-container &,
-  #tabbrowser-tabs[orient="vertical"] & {
-    color: var(--identity-icon-color) !important;
-  }
-}
-
-
 /* Misc */
 /* ------------------------------------------------------------------------------------------ */
 
