@@ -104,7 +104,7 @@
     height: 32px !important;
     line-height: 32px !important;
     border-radius: 8px !important;
-    /* Needed for Tab Group Label Chevrons */
+    /* Needed for Tab Group Label Chevron Arrows */
     display: flex !important;
   }
 
@@ -140,7 +140,7 @@
   }
 }
 
-/* Tab Group Label Chevrons */
+/* Tab Group Label Chevron Arrows */
 .tab-group-label {
   tab-group > .tab-group-label-container &::before {
     display: flex !important;
