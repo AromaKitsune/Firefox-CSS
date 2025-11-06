@@ -34,7 +34,7 @@
 /* Make the collapsed Tab Groups' outline not look ugly with dark theme
  * https://www.reddit.com/r/FirefoxCSS/comments/1k1itvc/comment/mnnxnks/ */
 .tab-group-label {
-  tab-group[collapsed] > .tab-group-label-container > & {
+  tab-group[collapsed] > .tab-group-label-container & {
     outline: 1px solid light-dark(var(--tab-group-color), rgba(0,0,0,0.3)) !important;
   }
 }
