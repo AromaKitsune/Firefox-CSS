@@ -2,17 +2,17 @@
 A small collection of various Firefox CSS customisations.
 
 
-## Chonk Vertical Tabs
+## Vertical Tabs with 2-line Labels
 
-Vertical tabs with 2-line labels.
+Vertical tabs' height has been increased, wrapping the tab labels to two lines.
 
 Includes:
 * Full-width tab group labels
 * Chevron arrows added to the tab group labels
 
-CSS code: [ChonkVerticalTabs.css](/chrome/ChonkVerticalTabs.css)
+CSS code: [VerticalTabs-2LineLabels.css](/chrome/VerticalTabs-2LineLabels.css)
 
-![](/screenshots/ChonkVerticalTabs.png)
+![](/screenshots/VerticalTabs-2LineLabels.png)
 
 
 ## Other Styles
@@ -33,7 +33,7 @@ CSS code: [OtherStyles.css](/chrome/OtherStyles.css)
 * Transparent BG of Search Mode Switcher Button & URL Bar Label Box
 * Remove the green dot from a tab
 
-`*` Also part of "Chonk Vertical Tabs", so you can use only `ChonkVerticalTabs.css` if you prefer.
+`*` Also part of "Vertical Tabs with 2-line Labels", so you can use only `VerticalTabs-2LineLabels.css` if you prefer.
 
 
 ## Setup
@@ -50,6 +50,6 @@ CSS code: [OtherStyles.css](/chrome/OtherStyles.css)
 If you have an existing CSS setup, place those CSS files (except `userChrome.css`) into the `chrome` folder,
 and add the following path(s) to your `userChrome.css` file:
 ```
-@import "ChonkVerticalTabs.css";
+@import "VerticalTabs-2LineLabels.css";
 @import "OtherStyles.css";
 ```
