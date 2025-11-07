@@ -15,6 +15,15 @@ CSS code: [VerticalTabs-2LineLabels.css](/chrome/VerticalTabs-2LineLabels.css)
 ![](/screenshots/VerticalTabs-2LineLabels.png)
 
 
+## Tab Group Labels with Chevron Arrows
+
+For those who prefer the default 1-line tab labels.
+
+CSS code: [TabGroupLabels-ChevronArrows.css](/chrome/TabGroupLabels-ChevronArrows.css)
+
+![](/screenshots/TabGroupLabels-ChevronArrows.png)
+
+
 ## Other Styles
 
 Some styles that I'm currently using. These links lead to the original sources for reference.
@@ -33,7 +42,7 @@ CSS code: [OtherStyles.css](/chrome/OtherStyles.css)
 * Transparent BG of Search Mode Switcher Button & URL Bar Label Box
 * Remove the green dot from a tab
 
-`*` Also part of "Vertical Tabs with 2-line Labels", so you can use only `VerticalTabs-2LineLabels.css` if you prefer.
+`*` Also part of "Vertical Tabs with 2-line Labels" and "Tab Group Labels with Chevron Arrows", so you can use only `VerticalTabs-2LineLabels.css` or `TabGroupLabels-ChevronArrows.css` if you prefer.
 
 
 ## Setup
@@ -51,5 +60,6 @@ If you have an existing CSS setup, place those CSS files (except `userChrome.css
 and add the following path(s) to your `userChrome.css` file:
 ```
 @import "VerticalTabs-2LineLabels.css";
+@import "TabGroupLabels-ChevronArrows.css";
 @import "OtherStyles.css";
 ```

@@ -1,0 +1,87 @@
+/* Vertical Tab Group Labels with Chevron Arrows */
+
+
+/* Tab Groups */
+/* ------------------------------------------------------------------------------------------ */
+
+/* Tab Group Label */
+.tab-group-label {
+  #tabbrowser-tabs[orient="vertical"] & {
+    display: flex !important;
+  }
+
+  #tabbrowser-tabs[orient="vertical"][expanded] & {
+    padding-inline: 8px !important;
+  }
+
+  #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+    &::first-letter {
+      font-size: 0 !important;
+    }
+  }
+}
+
+/* Tab Group Label Chevron Arrows */
+.tab-group-label {
+  tab-group > .tab-group-label-container &::before {
+    display: flex !important;
+    width: 16px !important;
+    height: 16px !important;
+    -moz-context-properties: fill !important;
+    fill: currentColor !important;
+  }
+
+  #tabbrowser-tabs[orient="vertical"][expanded] & {
+    /* Expanded SideBar + Expanded TabGroup */
+    tab-group:not([collapsed]) > .tab-group-label-container &::before {
+      padding-inline-end: 8px !important;
+      padding-top: 4px !important;
+      content: url("chrome://global/skin/icons/arrow-down.svg") !important;
+    }
+
+    /* Expanded SideBar + Collapsed TabGroup */
+    tab-group:is([collapsed]) > .tab-group-label-container &::before {
+      padding-inline-end: 8px !important;
+      padding-top: 4px !important;
+      content: url("chrome://global/skin/icons/arrow-right.svg") !important;
+    }
+  }
+
+  #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+    /* Collapsed SideBar + Expanded TabGroup */
+    tab-group:not([collapsed]) > .tab-group-label-container &::before {
+      margin: auto !important;
+      content: url("chrome://global/skin/icons/arrow-down.svg") !important;
+    }
+
+    /* Collapsed SideBar + Collapsed TabGroup */
+    tab-group:is([collapsed]) > .tab-group-label-container &::before {
+      margin: auto !important;
+      content: url("chrome://global/skin/icons/arrow-right.svg") !important;
+    }
+  }
+}
+
+
+/* Misc */
+/* ------------------------------------------------------------------------------------------ */
+
+/* Hide the Close button from each tab */
+.tab-close-button {
+  display: none !important;
+}
+
+/* Remove the Content border and SideBar shadow
+ * https://www.reddit.com/r/FirefoxCSS/comments/1j3mx5s/comment/mg256hp/ */
+#tabbrowser-tabbox {
+  /* outline: none !important; */
+  box-shadow: none !important;
+}
+
+/* Make the collapsed Tab Groups' outline not look ugly with dark theme
+ * https://www.reddit.com/r/FirefoxCSS/comments/1k1itvc/comment/mnnxnks/ */
+.tab-group-label {
+  tab-group[collapsed] > .tab-group-label-container & {
+    outline: 1px solid light-dark(var(--tab-group-color), rgba(0,0,0,0.3)) !important;
+  }
+}
