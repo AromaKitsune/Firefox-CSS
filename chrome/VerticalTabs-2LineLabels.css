@@ -220,24 +220,40 @@
 /* Pinned Tabs */
 /* ------------------------------------------------------------------------------------------ */
 
-/* Pinned Tab Container */
-#tabbrowser-tabs[orient="vertical"] {
-  &:not([expanded]) {
-    .tabbrowser-tab[pinned] {
-      width: unset !important;
+/* Pinned Tab Background & Icon */
+#pinned-tabs-container[orient="vertical"] {
+  .tab-background {
+    #tabbrowser-tabs[orient="vertical"] & {
+      min-height: 32px !important;
+      border-radius: 8px !important;
+    }
+
+    #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+      min-width: 48px !important;
     }
   }
-}
 
-/* Pinned Tab Icon */
-#vertical-pinned-tabs-container {
   .tab-throbber,
   .tab-icon-pending,
   .tab-icon-image,
   .tab-sharing-icon-overlay,
   .tab-icon-overlay {
     #tabbrowser-tabs[orient="vertical"] & {
-      margin-inline: unset !important;
+      width: 16px !important;
+      height: 16px !important;
+      margin-inline-start: unset !important;
+    }
+
+    #tabbrowser-tabs[orient="vertical"][expanded] & {
+      margin-inline-end: unset !important;
+    }
+  }
+}
+
+#tabbrowser-tabs[orient="vertical"] {
+  &:not([expanded]) {
+    .tabbrowser-tab[pinned] {
+      width: 64px !important;
     }
   }
 }
